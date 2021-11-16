@@ -10,7 +10,7 @@ const Result = ({ user, height, weight }) => {
   return (
     <div className={styles.container}>
       <h3>
-        {user}'s BMI: {bmi}
+        {user && `${user}'s`} BMI: {bmi}
       </h3>
       {bmi <= 18.4 ? (
         <img
