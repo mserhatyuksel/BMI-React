@@ -59,7 +59,7 @@ function App() {
             ) : (
               <>
                 <h4>Welcome Back {localUser.name}</h4>
-                <h3>Your last BMI: {localUser.bmi}</h3>
+                <h3 className="bmi_title">Your last BMI: {localUser.bmi}</h3>
                 <Button onClick={() => setLocalUser(null)}>Recalculate</Button>
               </>
             )
