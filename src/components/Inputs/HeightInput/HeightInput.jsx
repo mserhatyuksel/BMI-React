@@ -17,9 +17,14 @@ const HeightInput = ({ handleHeight }) => {
           value={value}
           onChange={(e) => setValue(e.target.value)}
         />
-        <Link to="/weight" onClick={() => handleHeight(value)}>
-          <Button disabled={!value}>Next</Button>
-        </Link>
+        <div className={styles.buttons}>
+          <Link to="/" >
+            <Button>Back</Button>
+          </Link>
+          <Link to="/weight" onClick={() => handleHeight(value)}>
+            <Button disabled={!value}>Next</Button>
+          </Link>
+        </div>
       </div>
       <img src="/assets/images/height.png" alt="" />
     </div>

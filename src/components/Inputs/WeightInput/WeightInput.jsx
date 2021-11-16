@@ -18,9 +18,14 @@ const WeightInput = ({ handleWeight }) => {
           value={value}
           onChange={(e) => setValue(e.target.value)}
         />
-        <Link to="/result" onClick={() => handleWeight(value)}>
-          <Button disabled={!value}>Next</Button>
-        </Link>
+        <div className={styles.buttons}>
+          <Link to="/height">
+            <Button>Back</Button>
+          </Link>
+          <Link to="/result" onClick={() => handleWeight(value)}>
+            <Button disabled={!value}>Next</Button>
+          </Link>
+        </div>
       </div>
     </div>
   );
