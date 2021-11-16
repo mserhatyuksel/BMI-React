@@ -9,9 +9,14 @@ const Result = ({ user, height, weight }) => {
   }, []);
   return (
     <div className={styles.container}>
-      <h3>
-        {user && `${user}'s`} BMI: {bmi}
-      </h3>
+      <div className={styles.result}>
+        <h3>
+          {user && `${user}'s`} BMI: {bmi}
+        </h3>
+        <Link to="/">
+          <Button>Recalculate</Button>
+        </Link>
+      </div>
       {bmi <= 18.4 ? (
         <img
           className={styles.img}
@@ -35,9 +40,6 @@ const Result = ({ user, height, weight }) => {
           alt=""
         />
       )}
-      <Link to="/">
-        <Button>Recalculate</Button>
-      </Link>
     </div>
   );
 };
