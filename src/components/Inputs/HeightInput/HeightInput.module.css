@@ -9,6 +9,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  padding: 20px;
 }
 .input{
   display: flex;
