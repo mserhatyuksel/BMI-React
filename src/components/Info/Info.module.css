@@ -1,0 +1,27 @@
+.wrapper{
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.container{
+  position: absolute;
+  top: 35vh;
+  margin: auto;
+  width: 35%;
+  height: 30vh;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  z-index: 2;
+}
+.container h4{
+  color: red;
+}
+.container p{
+  text-indent: 20px;
+}
