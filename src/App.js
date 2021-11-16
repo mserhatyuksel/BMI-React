@@ -37,7 +37,10 @@ function App() {
           path="/height"
           element={<HeightInput handleHeight={handleHeight} />}
         />
-        <Route path="/result" element={<Result user={user} />} />
+        <Route
+          path="/result"
+          element={<Result user={user} weight={weight} height={height} />}
+        />
       </Routes>
     </div>
   );
