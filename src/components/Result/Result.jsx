@@ -9,7 +9,7 @@ const Result = ({ user, height, weight, handleLocal }) => {
   }, [weight, height]);
   useEffect(() => {
     handleLocal(bmi);
-  }, [bmi]);
+  }, [bmi,handleLocal]);
   return (
     <div className={styles.container}>
       <div className={styles.result}>
