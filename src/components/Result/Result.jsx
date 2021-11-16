@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "../UI/Button";
 import styles from "./Result.module.css";
-const Result = ({ user, height, weight }) => {
+const Result = ({ user, height, weight, handleLocal }) => {
   const [bmi, setBmi] = useState();
   useEffect(() => {
     setBmi((weight / Math.pow(height / 100, 2)).toFixed(2));
-  }, [weight,height]);
+  }, [weight, height]);
+  useEffect(() => {
+    handleLocal(bmi);
+  }, [bmi]);
   return (
     <div className={styles.container}>
       <div className={styles.result}>
