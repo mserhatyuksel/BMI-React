@@ -6,7 +6,7 @@ const Result = ({ user, height, weight }) => {
   const [bmi, setBmi] = useState();
   useEffect(() => {
     setBmi((weight / Math.pow(height / 100, 2)).toFixed(2));
-  }, []);
+  }, [weight,height]);
   return (
     <div className={styles.container}>
       <div className={styles.result}>
