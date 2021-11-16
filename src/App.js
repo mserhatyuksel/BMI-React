@@ -9,16 +9,34 @@ import { useState } from "react";
 
 function App() {
   const [user, setUser] = useState("");
+  const [weight, setWeight] = useState();
+  const [height, setHeight] = useState();
+
   const handleUser = (name) => {
     setUser(name);
   };
+
+  const handleWeight = (data) => {
+    setWeight(data);
+  };
+
+  const handleHeight = (data) => {
+    setHeight(data);
+  };
+
   return (
     <div className="container">
       <Header />
       <Routes>
         <Route path="/" exact element={<UserInput handleUser={handleUser} />} />
-        <Route path="/weight" element={<WeightInput />} />
-        <Route path="/height" element={<HeightInput />} />
+        <Route
+          path="/weight"
+          element={<WeightInput handleWeight={handleWeight} />}
+        />
+        <Route
+          path="/height"
+          element={<HeightInput handleHeight={handleHeight} />}
+        />
         <Route path="/result" element={<Result user={user} />} />
       </Routes>
     </div>
