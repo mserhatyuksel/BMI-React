@@ -1,0 +1,13 @@
+.btn{
+  color: orangered;
+  margin-top: 10px;
+  padding: 4px 10px;
+  border: 1px solid orangered;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+}
+.btn:hover{
+  color: #fff;
+  background: orangered;
+}
